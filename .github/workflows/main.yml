@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: webshinez.top
+        server: test.webshinez.top
         username: ${{secrets.FTP_USERNAME}}
         password: ${{ secrets.FTP_PASSWORD }}
